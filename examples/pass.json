@@ -1,0 +1,22 @@
+{
+  "title": "便携 LED 化妆镜 可折叠 带补光",
+  "keyword": "portable led makeup mirror",
+  "category": "beauty",
+  "fob_usd": 4.2,
+  "price_usd": 24.99,
+  "weight_oz": 9,
+  "dims_in": {"length_in": 8.0, "width_in": 6.0, "height_in": 1.2},
+  "origin": "CN",
+  "hs_code": "9405.40",
+  "shipping_per_kg": 8.0,
+  "storage_months": 2,
+  "return_rate": 0.05,
+  "month_sales": 900,
+  "avg_reviews_top3": 1200,
+  "brand_concentration": 0.35,
+  "monthly_fixed_usd": 600,
+  "initial_stock_units": 1800,
+  "launch_cost_usd": 1200,
+  "monthly_index": [0.85, 0.9, 1.0, 1.0, 1.05, 1.1, 1.15, 1.2, 1.0, 1.0, 1.25, 1.4],
+  "bullets": ["三色温补光，USB 充电", "折叠后仅 1.2 英寸厚，适合旅行", "高清镜面，无放大变形"]
+}

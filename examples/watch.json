@@ -1,0 +1,21 @@
+{
+  "title": "硅胶折叠水杯 750ml 户外便携",
+  "keyword": "collapsible water bottle",
+  "category": "tools",
+  "fob_usd": 3.8,
+  "price_usd": 17.99,
+  "weight_oz": 12,
+  "dims_in": {"length_in": 9.0, "width_in": 4.0, "height_in": 3.0},
+  "origin": "CN",
+  "hs_code": "3924.90",
+  "shipping_per_kg": 9.0,
+  "storage_months": 3,
+  "return_rate": 0.08,
+  "month_sales": 260,
+  "avg_reviews_top3": 6800,
+  "brand_concentration": 0.62,
+  "monthly_fixed_usd": 450,
+  "initial_stock_units": 600,
+  "launch_cost_usd": 900,
+  "bullets": ["食品级硅胶，耐 -20℃ 至 120℃", "折叠后仅 5cm 厚", "带挂扣，可挂背包"]
+}

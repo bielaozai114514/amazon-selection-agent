@@ -1,0 +1,21 @@
+{
+  "title": "迷你桌面加湿器 USB 静音 500ml",
+  "keyword": "mini humidifier usb",
+  "category": "electronics",
+  "fob_usd": 4.6,
+  "price_usd": 12.99,
+  "weight_oz": 10,
+  "dims_in": {"length_in": 5.0, "width_in": 5.0, "height_in": 6.0},
+  "origin": "CN",
+  "hs_code": "8479.89",
+  "shipping_per_kg": 10.0,
+  "storage_months": 3,
+  "return_rate": 0.12,
+  "month_sales": 1500,
+  "avg_reviews_top3": 9500,
+  "brand_concentration": 0.55,
+  "monthly_fixed_usd": 500,
+  "initial_stock_units": 3000,
+  "launch_cost_usd": 800,
+  "bullets": ["USB 供电，静音 28dB", "七彩夜灯模式", "缺水自动断电"]
+}
