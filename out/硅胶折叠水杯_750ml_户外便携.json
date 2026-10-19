@@ -1,0 +1,340 @@
+{
+  "product": {
+    "title": "硅胶折叠水杯 750ml 户外便携",
+    "keyword": "collapsible water bottle",
+    "category": "food_contact",
+    "fob_usd": 3.8,
+    "price_usd": 17.99,
+    "weight_oz": 12,
+    "dims_in": {
+      "length_in": 9.0,
+      "width_in": 4.0,
+      "height_in": 3.0
+    },
+    "origin": "CN",
+    "hs_code": "3924.90",
+    "shipping_per_kg": 9.0,
+    "storage_months": 3,
+    "return_rate": 0.08,
+    "month_sales": 260,
+    "avg_reviews_top3": 6800,
+    "brand_concentration": 0.62,
+    "monthly_fixed_usd": 450,
+    "initial_stock_units": 600,
+    "launch_cost_usd": 900,
+    "bullets": [
+      "食品级硅胶，耐 -20℃ 至 120℃",
+      "折叠后仅 5cm 厚",
+      "带挂扣，可挂背包"
+    ]
+  },
+  "profit": {
+    "size_class": "small_standard",
+    "chargeable_kg": 0.34,
+    "cogs": 3.8,
+    "freight": 3.06,
+    "insurance": 0.02,
+    "duty_rate": 0.25,
+    "duty": 0.95,
+    "prep": 0.35,
+    "inbound": 0.0,
+    "landed": 8.18,
+    "fba_fee": 3.53,
+    "referral": 2.7,
+    "storage": 0.16,
+    "returns": 0.72,
+    "total_cost": 15.29,
+    "unit_profit": 2.7,
+    "margin": 0.15,
+    "roi": 0.3298,
+    "breakeven_price": 15.29
+  },
+  "compliance": {
+    "score": 100,
+    "level": "low",
+    "category": "food_contact",
+    "category_warnings": [],
+    "brand_hits": [],
+    "feature_hits": [],
+    "certs": [
+      "FDA 食品接触材料",
+      "LFGB（欧洲）"
+    ],
+    "links": {
+      "uspto_patent": "https://ppubs.uspto.gov/pubwebapp/static/pages/ppubsbasic.html",
+      "google_patents": "https://patents.google.com/?q=%E7%A1%85%E8%83%B6%E6%8A%98%E5%8F%A0%E6%B0%B4%E6%9D%AF+750ml+%E6%88%B7%E5%A4%96%E4%BE%BF%E6%90%BA",
+      "uspto_trademark": "https://tmsearch.uspto.gov/search/search-information",
+      "wipo_brand": "https://branddb.wipo.int/",
+      "cnipa": "https://pss-system.cponline.cnipa.gov.cn/",
+      "euipo": "https://euipo.europa.eu/eSearch/",
+      "amazon_transparency": "https://transparency.amazon.com/"
+    },
+    "note": "命中项是人工核查清单，不是侵权判定"
+  },
+  "score": {
+    "sub_scores": {
+      "demand": 38.7,
+      "competition": 0,
+      "profit": 14.3,
+      "compliance": 100,
+      "logistics": 80
+    },
+    "total": 33.2,
+    "hard_filters": [],
+    "verdict": "watch"
+  },
+  "forecast": {
+    "initial_outlay": 3180.0,
+    "scenarios": {
+      "悲观": {
+        "price_usd": 16.19,
+        "unit_profit": 1.24,
+        "months": [
+          {
+            "month": 1,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -3436.56
+          },
+          {
+            "month": 2,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -3693.12
+          },
+          {
+            "month": 3,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -3949.68
+          },
+          {
+            "month": 4,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -4206.24
+          },
+          {
+            "month": 5,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -4462.8
+          },
+          {
+            "month": 6,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -4719.36
+          },
+          {
+            "month": 7,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -4975.92
+          },
+          {
+            "month": 8,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -5232.48
+          },
+          {
+            "month": 9,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -5489.04
+          },
+          {
+            "month": 10,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -5745.6
+          },
+          {
+            "month": 11,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -6002.16
+          },
+          {
+            "month": 12,
+            "units": 156,
+            "profit": -256.56,
+            "cumulative": -6258.72
+          }
+        ],
+        "total_units": 1872,
+        "total_profit": -3078.72,
+        "ending_cash": -6258.72,
+        "payback_month": null,
+        "worst_month": -256.56
+      },
+      "中性": {
+        "price_usd": 17.99,
+        "unit_profit": 2.7,
+        "months": [
+          {
+            "month": 1,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -2928.0
+          },
+          {
+            "month": 2,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -2676.0
+          },
+          {
+            "month": 3,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -2424.0
+          },
+          {
+            "month": 4,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -2172.0
+          },
+          {
+            "month": 5,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -1920.0
+          },
+          {
+            "month": 6,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -1668.0
+          },
+          {
+            "month": 7,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -1416.0
+          },
+          {
+            "month": 8,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -1164.0
+          },
+          {
+            "month": 9,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -912.0
+          },
+          {
+            "month": 10,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -660.0
+          },
+          {
+            "month": 11,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -408.0
+          },
+          {
+            "month": 12,
+            "units": 260,
+            "profit": 252.0,
+            "cumulative": -156.0
+          }
+        ],
+        "total_units": 3120,
+        "total_profit": 3024.0,
+        "ending_cash": -156.0,
+        "payback_month": null,
+        "worst_month": 252.0
+      },
+      "乐观": {
+        "price_usd": 19.79,
+        "unit_profit": 4.16,
+        "months": [
+          {
+            "month": 1,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": -2223.92
+          },
+          {
+            "month": 2,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": -1267.84
+          },
+          {
+            "month": 3,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": -311.76
+          },
+          {
+            "month": 4,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 644.32
+          },
+          {
+            "month": 5,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 1600.4
+          },
+          {
+            "month": 6,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 2556.48
+          },
+          {
+            "month": 7,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 3512.56
+          },
+          {
+            "month": 8,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 4468.64
+          },
+          {
+            "month": 9,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 5424.72
+          },
+          {
+            "month": 10,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 6380.8
+          },
+          {
+            "month": 11,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 7336.88
+          },
+          {
+            "month": 12,
+            "units": 338,
+            "profit": 956.08,
+            "cumulative": 8292.96
+          }
+        ],
+        "total_units": 4056,
+        "total_profit": 11472.96,
+        "ending_cash": 8292.96,
+        "payback_month": 4,
+        "worst_month": 956.08
+      }
+    }
+  }
+}

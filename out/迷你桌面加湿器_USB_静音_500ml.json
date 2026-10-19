@@ -1,0 +1,344 @@
+{
+  "product": {
+    "title": "迷你桌面加湿器 USB 静音 500ml",
+    "keyword": "mini humidifier usb",
+    "category": "electronics",
+    "fob_usd": 4.6,
+    "price_usd": 12.99,
+    "weight_oz": 10,
+    "dims_in": {
+      "length_in": 5.0,
+      "width_in": 5.0,
+      "height_in": 6.0
+    },
+    "origin": "CN",
+    "hs_code": "8479.89",
+    "shipping_per_kg": 10.0,
+    "storage_months": 3,
+    "return_rate": 0.12,
+    "month_sales": 1500,
+    "avg_reviews_top3": 9500,
+    "brand_concentration": 0.55,
+    "monthly_fixed_usd": 500,
+    "initial_stock_units": 3000,
+    "launch_cost_usd": 800,
+    "bullets": [
+      "USB 供电，静音 28dB",
+      "七彩夜灯模式",
+      "缺水自动断电"
+    ]
+  },
+  "profit": {
+    "size_class": "small_standard",
+    "chargeable_kg": 0.41,
+    "cogs": 4.6,
+    "freight": 4.1,
+    "insurance": 0.02,
+    "duty_rate": 0.25,
+    "duty": 1.15,
+    "prep": 0.35,
+    "inbound": 0.0,
+    "landed": 10.22,
+    "fba_fee": 3.43,
+    "referral": 1.04,
+    "storage": 0.23,
+    "returns": 0.78,
+    "total_cost": 15.69,
+    "unit_profit": -2.7,
+    "margin": -0.2082,
+    "roi": -0.2647,
+    "breakeven_price": 15.69
+  },
+  "compliance": {
+    "score": 100,
+    "level": "low",
+    "category": "electronics",
+    "category_warnings": [],
+    "brand_hits": [],
+    "feature_hits": [],
+    "certs": [
+      "FCC",
+      "UL/ETL",
+      "加州 65 号提案标签"
+    ],
+    "links": {
+      "uspto_patent": "https://ppubs.uspto.gov/pubwebapp/static/pages/ppubsbasic.html",
+      "google_patents": "https://patents.google.com/?q=%E8%BF%B7%E4%BD%A0%E6%A1%8C%E9%9D%A2%E5%8A%A0%E6%B9%BF%E5%99%A8+USB+%E9%9D%99%E9%9F%B3+500ml",
+      "uspto_trademark": "https://tmsearch.uspto.gov/search/search-information",
+      "wipo_brand": "https://branddb.wipo.int/",
+      "cnipa": "https://pss-system.cponline.cnipa.gov.cn/",
+      "euipo": "https://euipo.europa.eu/eSearch/",
+      "amazon_transparency": "https://transparency.amazon.com/"
+    },
+    "note": "命中项是人工核查清单，不是侵权判定"
+  },
+  "score": {
+    "sub_scores": {
+      "demand": 80.0,
+      "competition": 0,
+      "profit": 0,
+      "compliance": 100,
+      "logistics": 80
+    },
+    "total": 42.0,
+    "hard_filters": [
+      "毛利率 -20.8% 低于 15%",
+      "售价低于 15 美元，广告成本吃不动"
+    ],
+    "verdict": "reject"
+  },
+  "forecast": {
+    "initial_outlay": 14600.0,
+    "scenarios": {
+      "悲观": {
+        "price_usd": 11.69,
+        "unit_profit": -3.82,
+        "months": [
+          {
+            "month": 1,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -18538.0
+          },
+          {
+            "month": 2,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -22476.0
+          },
+          {
+            "month": 3,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -26414.0
+          },
+          {
+            "month": 4,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -30352.0
+          },
+          {
+            "month": 5,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -34290.0
+          },
+          {
+            "month": 6,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -38228.0
+          },
+          {
+            "month": 7,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -42166.0
+          },
+          {
+            "month": 8,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -46104.0
+          },
+          {
+            "month": 9,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -50042.0
+          },
+          {
+            "month": 10,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -53980.0
+          },
+          {
+            "month": 11,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -57918.0
+          },
+          {
+            "month": 12,
+            "units": 900,
+            "profit": -3938.0,
+            "cumulative": -61856.0
+          }
+        ],
+        "total_units": 10800,
+        "total_profit": -47256.0,
+        "ending_cash": -61856.0,
+        "payback_month": null,
+        "worst_month": -3938.0
+      },
+      "中性": {
+        "price_usd": 12.99,
+        "unit_profit": -2.7,
+        "months": [
+          {
+            "month": 1,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -19150.0
+          },
+          {
+            "month": 2,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -23700.0
+          },
+          {
+            "month": 3,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -28250.0
+          },
+          {
+            "month": 4,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -32800.0
+          },
+          {
+            "month": 5,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -37350.0
+          },
+          {
+            "month": 6,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -41900.0
+          },
+          {
+            "month": 7,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -46450.0
+          },
+          {
+            "month": 8,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -51000.0
+          },
+          {
+            "month": 9,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -55550.0
+          },
+          {
+            "month": 10,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -60100.0
+          },
+          {
+            "month": 11,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -64650.0
+          },
+          {
+            "month": 12,
+            "units": 1500,
+            "profit": -4550.0,
+            "cumulative": -69200.0
+          }
+        ],
+        "total_units": 18000,
+        "total_profit": -54600.0,
+        "ending_cash": -69200.0,
+        "payback_month": null,
+        "worst_month": -4550.0
+      },
+      "乐观": {
+        "price_usd": 14.29,
+        "unit_profit": -1.59,
+        "months": [
+          {
+            "month": 1,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -18200.5
+          },
+          {
+            "month": 2,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -21801.0
+          },
+          {
+            "month": 3,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -25401.5
+          },
+          {
+            "month": 4,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -29002.0
+          },
+          {
+            "month": 5,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -32602.5
+          },
+          {
+            "month": 6,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -36203.0
+          },
+          {
+            "month": 7,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -39803.5
+          },
+          {
+            "month": 8,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -43404.0
+          },
+          {
+            "month": 9,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -47004.5
+          },
+          {
+            "month": 10,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -50605.0
+          },
+          {
+            "month": 11,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -54205.5
+          },
+          {
+            "month": 12,
+            "units": 1950,
+            "profit": -3600.5,
+            "cumulative": -57806.0
+          }
+        ],
+        "total_units": 23400,
+        "total_profit": -43206.0,
+        "ending_cash": -57806.0,
+        "payback_month": null,
+        "worst_month": -3600.5
+      }
+    }
+  }
+}

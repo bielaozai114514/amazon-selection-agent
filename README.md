@@ -14,9 +14,9 @@ python agent.py examples/pass.json --out out
 
 | 文件 | 结论 | 卡在哪 |
 |---|---|---|
-| `examples/pass.json` | pass | 毛利率 37%，合规干净 |
-| `examples/watch.json` | watch | 竞争高、毛利薄，总分不足 60 |
-| `examples/reject.json` | reject | 售价低于 15 美元且毛利不足 15% |
+| `examples/pass.json` | pass | 毛利率 44%，合规干净 |
+| `examples/watch.json` | watch | 竞争高、毛利薄（15% 刚好卡线），总分不足 60 |
+| `examples/reject.json` | reject | 售价低于 15 美元且毛利为负 |
 
 批量输入：
 
@@ -51,6 +51,13 @@ FOB、头程（实重与体积重取大，体积重按 cm³/6000）、保险、�
 ## 合规
 
 品牌词与特征词命中、按类目的认证清单、七个官方检索入口（USPTO 专利、Google Patents、USPTO 商标、WIPO、CNIPA、EUIPO、Amazon Transparency）。
+
+**类目校验**：`category` 是唯一决定认证清单的字段，填错就整张清单错。所以每次扫描都会拿标题、关键词、卖点去反查类目信号词，冲突时在报告里告警而不是静默通过。两类问题会被抓出来：
+
+- 类目不在映射表里（如填 `tools`）→ 认证清单会为空，用户误以为「不需要认证」
+- 标题命中另一类目的强信号词（如「水杯」配 `tools`）→ 认证清单整张都不对
+
+排除短语用来压误报：「化妆镜」含 makeup 但它是镜子不是化妆品，不该按 beauty 出清单。
 
 输出的是核查清单，不是侵权结论。关键词命中和侵权判定之间隔着真实的专利检索。
 

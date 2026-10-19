@@ -2,6 +2,14 @@
 
 WEIGHT_PCT = {"demand": 30, "competition": 25, "profit": 25, "compliance": 10, "logistics": 10}
 
+DIM_LABEL = {
+    "demand": "需求",
+    "competition": "竞争",
+    "profit": "利润",
+    "compliance": "合规",
+    "logistics": "物流",
+}
+
 
 def money(v):
     return f"${v:,.2f}"
@@ -28,7 +36,7 @@ def render(product, profit, compliance, score, forecast=None):
         ("保险", profit["insurance"]),
         (f"关税（{profit['duty_rate']:.1%}）", profit["duty"]),
         ("贴标/预处理", profit["prep"]),
-        ("入仓费", profit["inbound"]),
+        ("入仓费", profit["inbound"] if product.get("inbound_fee") is not None else "未提供"),
         ("FBA 配送费", profit["fba_fee"]),
         ("平台佣金", profit["referral"]),
         ("仓储", profit["storage"]),
@@ -36,7 +44,8 @@ def render(product, profit, compliance, score, forecast=None):
         ("合计成本", profit["total_cost"]),
     ]
     for name, v in rows:
-        lines.append(f"| {name} | {money(v)} |")
+        cell = money(v) if isinstance(v, (int, float)) else f"{v}（未计入成本）"
+        lines.append(f"| {name} | {cell} |")
     lines.append("")
     lines.append("## 关键指标")
     lines.append("")
@@ -52,11 +61,19 @@ def render(product, profit, compliance, score, forecast=None):
     lines.append("| 维度 | 分数 | 权重 |")
     lines.append("|---|---|---|")
     for k, v in score["sub_scores"].items():
-        lines.append(f"| {k} | {v} | {WEIGHT_PCT[k]}% |")
+        lines.append(f"| {DIM_LABEL.get(k, k)} | {v} | {WEIGHT_PCT[k]}% |")
     lines.append("")
     lines.append("## 合规")
     lines.append("")
+    lines.append(f"- 类目：{compliance.get('category') or '未填'}")
     lines.append(f"- 扫描分：{compliance['score']}（{compliance['level']}）")
+    warnings = compliance.get("category_warnings") or []
+    if warnings:
+        lines.append("")
+        lines.append("**⚠️ 类目校验告警**（认证清单可能整张都不对）：")
+        for w in warnings:
+            lines.append(f"- {w}")
+        lines.append("")
     if compliance["brand_hits"]:
         lines.append(f"- 品牌词命中：{', '.join(compliance['brand_hits'])}")
     if compliance["feature_hits"]:

@@ -1,0 +1,358 @@
+{
+  "product": {
+    "title": "便携 LED 化妆镜 可折叠 带补光",
+    "keyword": "portable led makeup mirror",
+    "category": "electronics",
+    "fob_usd": 4.2,
+    "price_usd": 24.99,
+    "weight_oz": 9,
+    "dims_in": {
+      "length_in": 8.0,
+      "width_in": 6.0,
+      "height_in": 1.2
+    },
+    "origin": "CN",
+    "hs_code": "9405.40",
+    "shipping_per_kg": 8.0,
+    "storage_months": 2,
+    "return_rate": 0.05,
+    "month_sales": 900,
+    "avg_reviews_top3": 1200,
+    "brand_concentration": 0.35,
+    "monthly_fixed_usd": 600,
+    "initial_stock_units": 1800,
+    "launch_cost_usd": 1200,
+    "monthly_index": [
+      0.85,
+      0.9,
+      1.0,
+      1.0,
+      1.05,
+      1.1,
+      1.15,
+      1.2,
+      1.0,
+      1.0,
+      1.25,
+      1.4
+    ],
+    "bullets": [
+      "三色温补光，USB 充电",
+      "折叠后仅 1.2 英寸厚，适合旅行",
+      "高清镜面，无放大变形"
+    ]
+  },
+  "profit": {
+    "size_class": "small_standard",
+    "chargeable_kg": 0.255,
+    "cogs": 4.2,
+    "freight": 2.04,
+    "insurance": 0.02,
+    "duty_rate": 0.285,
+    "duty": 1.2,
+    "prep": 0.35,
+    "inbound": 0.0,
+    "landed": 7.81,
+    "fba_fee": 3.43,
+    "referral": 2.0,
+    "storage": 0.06,
+    "returns": 0.62,
+    "total_cost": 13.92,
+    "unit_profit": 11.07,
+    "margin": 0.4429,
+    "roi": 1.4174,
+    "breakeven_price": 13.92
+  },
+  "compliance": {
+    "score": 100,
+    "level": "low",
+    "category": "electronics",
+    "category_warnings": [],
+    "brand_hits": [],
+    "feature_hits": [],
+    "certs": [
+      "FCC",
+      "MSDS",
+      "UL/ETL",
+      "UN38.3",
+      "加州 65 号提案标签",
+      "锂电池运输鉴定"
+    ],
+    "links": {
+      "uspto_patent": "https://ppubs.uspto.gov/pubwebapp/static/pages/ppubsbasic.html",
+      "google_patents": "https://patents.google.com/?q=%E4%BE%BF%E6%90%BA+LED+%E5%8C%96%E5%A6%86%E9%95%9C+%E5%8F%AF%E6%8A%98%E5%8F%A0+%E5%B8%A6%E8%A1%A5%E5%85%89",
+      "uspto_trademark": "https://tmsearch.uspto.gov/search/search-information",
+      "wipo_brand": "https://branddb.wipo.int/",
+      "cnipa": "https://pss-system.cponline.cnipa.gov.cn/",
+      "euipo": "https://euipo.europa.eu/eSearch/",
+      "amazon_transparency": "https://transparency.amazon.com/"
+    },
+    "note": "命中项是人工核查清单，不是侵权判定"
+  },
+  "score": {
+    "sub_scores": {
+      "demand": 60.0,
+      "competition": 80.0,
+      "profit": 98.0,
+      "compliance": 100,
+      "logistics": 80
+    },
+    "total": 80.5,
+    "hard_filters": [],
+    "verdict": "pass"
+  },
+  "forecast": {
+    "initial_outlay": 8760.0,
+    "scenarios": {
+      "悲观": {
+        "price_usd": 22.49,
+        "unit_profit": 8.83,
+        "months": [
+          {
+            "month": 1,
+            "units": 459,
+            "profit": 3452.97,
+            "cumulative": -5307.03
+          },
+          {
+            "month": 2,
+            "units": 486,
+            "profit": 3691.38,
+            "cumulative": -1615.65
+          },
+          {
+            "month": 3,
+            "units": 540,
+            "profit": 4168.2,
+            "cumulative": 2552.55
+          },
+          {
+            "month": 4,
+            "units": 540,
+            "profit": 4168.2,
+            "cumulative": 6720.75
+          },
+          {
+            "month": 5,
+            "units": 567,
+            "profit": 4406.61,
+            "cumulative": 11127.36
+          },
+          {
+            "month": 6,
+            "units": 594,
+            "profit": 4645.02,
+            "cumulative": 15772.38
+          },
+          {
+            "month": 7,
+            "units": 621,
+            "profit": 4883.43,
+            "cumulative": 20655.81
+          },
+          {
+            "month": 8,
+            "units": 648,
+            "profit": 5121.84,
+            "cumulative": 25777.65
+          },
+          {
+            "month": 9,
+            "units": 540,
+            "profit": 4168.2,
+            "cumulative": 29945.85
+          },
+          {
+            "month": 10,
+            "units": 540,
+            "profit": 4168.2,
+            "cumulative": 34114.05
+          },
+          {
+            "month": 11,
+            "units": 675,
+            "profit": 5360.25,
+            "cumulative": 39474.3
+          },
+          {
+            "month": 12,
+            "units": 756,
+            "profit": 6075.48,
+            "cumulative": 45549.78
+          }
+        ],
+        "total_units": 6966,
+        "total_profit": 54309.78,
+        "ending_cash": 45549.78,
+        "payback_month": 3,
+        "worst_month": 3452.97
+      },
+      "中性": {
+        "price_usd": 24.99,
+        "unit_profit": 11.07,
+        "months": [
+          {
+            "month": 1,
+            "units": 765,
+            "profit": 7868.55,
+            "cumulative": -891.45
+          },
+          {
+            "month": 2,
+            "units": 810,
+            "profit": 8366.7,
+            "cumulative": 7475.25
+          },
+          {
+            "month": 3,
+            "units": 900,
+            "profit": 9363.0,
+            "cumulative": 16838.25
+          },
+          {
+            "month": 4,
+            "units": 900,
+            "profit": 9363.0,
+            "cumulative": 26201.25
+          },
+          {
+            "month": 5,
+            "units": 945,
+            "profit": 9861.15,
+            "cumulative": 36062.4
+          },
+          {
+            "month": 6,
+            "units": 990,
+            "profit": 10359.3,
+            "cumulative": 46421.7
+          },
+          {
+            "month": 7,
+            "units": 1035,
+            "profit": 10857.45,
+            "cumulative": 57279.15
+          },
+          {
+            "month": 8,
+            "units": 1080,
+            "profit": 11355.6,
+            "cumulative": 68634.75
+          },
+          {
+            "month": 9,
+            "units": 900,
+            "profit": 9363.0,
+            "cumulative": 77997.75
+          },
+          {
+            "month": 10,
+            "units": 900,
+            "profit": 9363.0,
+            "cumulative": 87360.75
+          },
+          {
+            "month": 11,
+            "units": 1125,
+            "profit": 11853.75,
+            "cumulative": 99214.5
+          },
+          {
+            "month": 12,
+            "units": 1260,
+            "profit": 13348.2,
+            "cumulative": 112562.7
+          }
+        ],
+        "total_units": 11610,
+        "total_profit": 121322.7,
+        "ending_cash": 112562.7,
+        "payback_month": 2,
+        "worst_month": 7868.55
+      },
+      "乐观": {
+        "price_usd": 27.49,
+        "unit_profit": 13.31,
+        "months": [
+          {
+            "month": 1,
+            "units": 994,
+            "profit": 12630.14,
+            "cumulative": 3870.14
+          },
+          {
+            "month": 2,
+            "units": 1053,
+            "profit": 13415.43,
+            "cumulative": 17285.57
+          },
+          {
+            "month": 3,
+            "units": 1170,
+            "profit": 14972.7,
+            "cumulative": 32258.27
+          },
+          {
+            "month": 4,
+            "units": 1170,
+            "profit": 14972.7,
+            "cumulative": 47230.97
+          },
+          {
+            "month": 5,
+            "units": 1228,
+            "profit": 15744.68,
+            "cumulative": 62975.65
+          },
+          {
+            "month": 6,
+            "units": 1287,
+            "profit": 16529.97,
+            "cumulative": 79505.62
+          },
+          {
+            "month": 7,
+            "units": 1346,
+            "profit": 17315.26,
+            "cumulative": 96820.88
+          },
+          {
+            "month": 8,
+            "units": 1404,
+            "profit": 18087.24,
+            "cumulative": 114908.12
+          },
+          {
+            "month": 9,
+            "units": 1170,
+            "profit": 14972.7,
+            "cumulative": 129880.82
+          },
+          {
+            "month": 10,
+            "units": 1170,
+            "profit": 14972.7,
+            "cumulative": 144853.52
+          },
+          {
+            "month": 11,
+            "units": 1462,
+            "profit": 18859.22,
+            "cumulative": 163712.74
+          },
+          {
+            "month": 12,
+            "units": 1638,
+            "profit": 21201.78,
+            "cumulative": 184914.52
+          }
+        ],
+        "total_units": 15092,
+        "total_profit": 193674.52,
+        "ending_cash": 184914.52,
+        "payback_month": 1,
+        "worst_month": 12630.14
+      }
+    }
+  }
+}
