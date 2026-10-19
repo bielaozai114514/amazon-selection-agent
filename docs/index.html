@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亚马逊选品决策 Agent</title>
+<style>
+:root{--ink:#1a1a1a;--sub:#666;--line:#e3e6ea;--brand:#1f6feb;--bg:#f6f7f9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:36px 18px 70px}
+h1{font-size:22px;margin:0 0 6px}
+.sub{color:var(--sub);font-size:13px;margin:0 0 22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+.grp{font-size:13px;font-weight:600;color:#374151;margin:18px 0 10px}
+.grp:first-child{margin-top:0}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:700px){.row{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:12px;color:var(--sub);margin-bottom:4px}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:7px;font:inherit;background:#fff;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--brand)}
+textarea{resize:vertical;min-height:74px}
+button{background:var(--brand);color:#fff;border:0;border-radius:8px;padding:11px 22px;font:inherit;font-weight:500;cursor:pointer;width:100%;margin-top:18px}
+button:disabled{opacity:.55;cursor:default}
+#status{font-size:13px;color:var(--sub);text-align:center;padding:10px 0}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.metric{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center}
+.metric .k{font-size:12px;color:var(--sub)}
+.metric .v{font-size:20px;font-weight:600;margin-top:4px}
+.pass{color:#0f6e56}.watch{color:#854f0b}.reject{color:#a32d2d}
+.warn{background:#fff8e6;border:1px solid #f0d79a;border-radius:8px;padding:10px 12px;font-size:13px;margin-bottom:14px;color:#6b4a00}
+#md h1{font-size:19px;margin:22px 0 10px}
+#md h2{font-size:16px;margin:20px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+#md h3{font-size:14px;margin:16px 0 6px}
+#md table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+#md th,#md td{border:1px solid var(--line);padding:7px 9px;text-align:left}
+#md th{background:#f3f5f8;font-weight:600}
+#md ul{padding-left:20px}
+#md code{background:#f3f5f8;padding:1px 5px;border-radius:4px;font-size:12px}
+#md hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+.foot{font-size:12px;color:var(--sub);text-align:center;margin-top:26px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>亚马逊选品决策 Agent</h1>
+  <p class="sub">输入候选产品，输出「做 / 观望 / 否决」结论、成本拆解、合规清单与 52 周现金流。全部计算在浏览器本地完成，数据不上传。</p>
+
+  <div class="card">
+    <div class="grp">产品信息</div>
+    <div class="row">
+      <div><label>产品名</label><input id="title" value="便携 LED 化妆镜 可折叠 带补光"></div>
+      <div><label>核心关键词（英文）</label><input id="keyword" value="portable led makeup mirror"></div>
+      <div><label>类目</label>
+        <select id="category">
+          <option value="electronics">electronics 电子</option>
+          <option value="home_kitchen">home_kitchen 家居厨房</option>
+          <option value="beauty">beauty 美妆</option>
+          <option value="food_contact">food_contact 食品接触</option>
+          <option value="toys">toys 玩具</option>
+          <option value="apparel">apparel 服饰</option>
+          <option value="tools">tools 工具</option>
+        </select>
+      </div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <div><label>采购价 FOB（USD）</label><input id="fob" type="number" step="0.1" value="4.2"></div>
+      <div><label>售价（USD）</label><input id="price" type="number" step="0.5" value="24.99"></div>
+      <div><label>头程单价（USD/kg）</label><input id="shipping" type="number" step="0.5" value="8"></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <div><label>单件重量（oz）</label><input id="weight" type="number" step="0.5" value="9"></div>
+      <div><label>HS 编码</label><input id="hs" value="9405.40"></div>
+      <div><label>产地</label><select id="origin"><option>CN</option><option>VN</option><option>IN</option><option>US</option></select></div>
+    </div>
+
+    <div class="grp">尺寸（英寸）</div>
+    <div class="row">
+      <div><label>长</label><input id="len" type="number" step="0.1" value="8"></div>
+      <div><label>宽</label><input id="wid" type="number" step="0.1" value="6"></div>
+      <div><label>高</label><input id="hei" type="number" step="0.1" value="1.2"></div>
+    </div>
+
+    <div class="grp">市场与运营假设</div>
+    <div class="row">
+      <div><label>预计月销量</label><input id="sales" type="number" value="900"></div>
+      <div><label>头部竞品评论数</label><input id="reviews" type="number" value="1200"></div>
+      <div><label>品牌集中度（0-1）</label><input id="brand" type="number" step="0.05" value="0.35"></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <div><label>退货率（0-1）</label><input id="ret" type="number" step="0.01" value="0.05"></div>
+      <div><label>首批备货（件）</label><input id="stock" type="number" value="1800"></div>
+      <div><label>推广投入（USD）</label><input id="launch" type="number" value="1200"></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <div><label>月固定成本（USD）</label><input id="fixed" type="number" value="600"></div>
+      <div style="grid-column:span 2"><label>产品卖点（每行一条，用于合规扫描）</label>
+        <textarea id="bullets">三色温补光，USB 充电
+折叠后仅 1.2 英寸厚，适合旅行
+高清镜面，无放大变形</textarea>
+      </div>
+    </div>
+
+    <button id="go" disabled>正在加载计算引擎…</button>
+  </div>
+
+  <div id="status">首次打开需要下载计算引擎（约 10 秒），之后会缓存。</div>
+  <div id="warns"></div>
+  <div id="result" hidden>
+    <div class="metrics">
+      <div class="metric"><div class="k">结论</div><div class="v" id="m-verdict">—</div></div>
+      <div class="metric"><div class="k">总分</div><div class="v" id="m-score">—</div></div>
+      <div class="metric"><div class="k">毛利率</div><div class="v" id="m-margin">—</div></div>
+    </div>
+    <div class="card"><div id="md"></div></div>
+  </div>
+
+  <p class="foot">
+    费率表为 2024-04-15 美国站基准，正式决策前请按卖家后台最新费率核对。<br>
+    合规部分只给检索入口与认证清单，不构成侵权结论。
+  </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script>
+const FILES = [
+  "tools/__init__.py", "tools/profit.py", "tools/compliance.py",
+  "tools/scoring.py", "tools/forecast.py", "tools/report.py",
+  "data/fba_fees.json", "data/duty_rates.json", "data/risk_terms.json",
+];
+const $ = id => document.getElementById(id);
+let py = null;
+
+function setStatus(t) { $("status").textContent = t; }
+
+async function boot() {
+  try {
+    py = await loadPyodide();
+    py.FS.mkdirTree("/home/pyodide/app/tools");
+    py.FS.mkdirTree("/home/pyodide/app/data");
+    for (const f of FILES) {
+      const res = await fetch("app/" + f);
+      if (!res.ok) throw new Error("缺少文件 " + f);
+      const text = await res.text();
+      py.FS.writeFile("/home/pyodide/app/" + f, text);
+    }
+    py.runPython("import sys; sys.path.insert(0, '/home/pyodide/app')");
+    py.runPython("from tools import profit, compliance, scoring, forecast, report");
+    setStatus("计算引擎就绪。");
+    $("go").disabled = false;
+    $("go").textContent = "开始评估";
+    if (new URLSearchParams(location.search).has("demo")) setTimeout(run, 300);
+  } catch (e) {
+    setStatus("引擎加载失败：" + e.message);
+  }
+}
+
+function collect() {
+  const num = id => parseFloat($(id).value) || 0;
+  return {
+    title: $("title").value.trim(),
+    keyword: $("keyword").value.trim(),
+    category: $("category").value,
+    fob_usd: num("fob"),
+    price_usd: num("price"),
+    weight_oz: num("weight"),
+    dims_in: { length_in: num("len"), width_in: num("wid"), height_in: num("hei") },
+    origin: $("origin").value,
+    hs_code: $("hs").value.trim() || null,
+    shipping_per_kg: num("shipping"),
+    storage_months: 2,
+    return_rate: num("ret"),
+    month_sales: Math.round(num("sales")),
+    avg_reviews_top3: Math.round(num("reviews")),
+    brand_concentration: num("brand"),
+    monthly_fixed_usd: num("fixed"),
+    initial_stock_units: Math.round(num("stock")),
+    launch_cost_usd: num("launch"),
+    monthly_index: Array(12).fill(1.0),
+    bullets: $("bullets").value.split("\n").map(s => s.trim()).filter(Boolean),
+  };
+}
+
+function run() {
+  $("go").disabled = true;
+  $("go").textContent = "计算中…";
+  try {
+    py.globals.set("PRODUCT_JSON", JSON.stringify(collect()));
+    const out = py.runPython(`
+import json
+product = json.loads(PRODUCT_JSON)
+fees = profit.load(profit.DATA / "fba_fees.json")
+duty = profit.load(profit.DATA / "duty_rates.json")
+p = profit.calc(product, fees, duty)
+c = compliance.check(product)
+s = scoring.score(product, p, c)
+f = forecast.run(product)
+md = report.render(product, p, c, s, f)
+json.dumps({"p": p, "c": c, "s": s, "md": md}, ensure_ascii=False)
+`);
+    render(JSON.parse(out));
+    setStatus("");
+  } catch (e) {
+    setStatus("计算失败：" + e.message);
+  } finally {
+    $("go").disabled = false;
+    $("go").textContent = "重新评估";
+  }
+}
+
+function render(r) {
+  const v = r.s.verdict;
+  const cls = v === "pass" ? "pass" : v === "watch" ? "watch" : "reject";
+  const el = $("m-verdict");
+  el.textContent = v.toUpperCase();
+  el.className = "v " + cls;
+  $("m-score").textContent = r.s.total + "/100";
+  $("m-margin").textContent = (r.p.margin * 100).toFixed(1) + "%";
+
+  const warns = [];
+  if (r.s.hard_filters && r.s.hard_filters.length) warns.push("命中硬性否决：" + r.s.hard_filters.join("；"));
+  if (r.c.category_warnings && r.c.category_warnings.length) warns.push("类目校验告警：" + r.c.category_warnings.join("；"));
+  $("warns").innerHTML = warns.map(w => '<div class="warn">' + w + "</div>").join("");
+
+  $("md").innerHTML = marked.parse(r.md);
+  $("result").hidden = false;
+  $("result").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+$("go").addEventListener("click", run);
+boot();
+</script>
+</body>
+</html>
