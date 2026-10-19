@@ -73,13 +73,13 @@
   },
   "score": {
     "sub_scores": {
-      "demand": 38.7,
+      "demand": 47.6,
       "competition": 0,
       "profit": 14.3,
       "compliance": 100,
       "logistics": 80
     },
-    "total": 33.2,
+    "total": 25.1,
     "hard_filters": [],
     "verdict": "watch"
   },

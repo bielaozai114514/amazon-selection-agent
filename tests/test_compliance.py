@@ -12,7 +12,7 @@ from tools import compliance
 class CategoryValidationTest(unittest.TestCase):
     def test_unknown_category_warns(self):
         """category 不在认证映射表里时必须告警，不能静默返回空清单。"""
-        product = {"title": "某产品", "category": "tools"}
+        product = {"title": "某产品", "category": "nonexistent_category"}
         warnings = compliance.validate_category(product)
         self.assertTrue(
             any("不在认证映射表" in w for w in warnings),

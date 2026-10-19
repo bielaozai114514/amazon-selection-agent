@@ -91,13 +91,13 @@
   },
   "score": {
     "sub_scores": {
-      "demand": 60.0,
+      "demand": 54.9,
       "competition": 80.0,
       "profit": 98.0,
       "compliance": 100,
       "logistics": 80
     },
-    "total": 80.5,
+    "total": 79.0,
     "hard_filters": [],
     "verdict": "pass"
   },

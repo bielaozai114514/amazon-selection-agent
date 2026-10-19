@@ -74,16 +74,17 @@
   },
   "score": {
     "sub_scores": {
-      "demand": 80.0,
+      "demand": 57.9,
       "competition": 0,
       "profit": 0,
       "compliance": 100,
       "logistics": 80
     },
-    "total": 42.0,
+    "total": 24.8,
     "hard_filters": [
       "毛利率 -20.8% 低于 15%",
-      "售价低于 15 美元，广告成本吃不动"
+      "售价低于 15 美元，广告成本吃不动",
+      "月利润 $-4,050 低于月固定成本 $500，卖得越多亏得越多"
     ],
     "verdict": "reject"
   },
